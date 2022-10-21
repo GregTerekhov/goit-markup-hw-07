@@ -1,0 +1,134 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__call {
+    font-size: 20px;
+    line-height: 1.172;
+  
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.form__panel-list {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    width: 100%;
+}
+
+.form__label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 4px;
+  
+    font-size: 12px;
+    line-height: 1.172;
+    letter-spacing: 0.01em;
+  
+    color: $text-colour-secondary;
+}
+
+.form__field {
+    position: relative;
+}
+
+.form__input {
+    display: block;
+    margin: 0;
+    padding: 12px 12px 12px 42px;
+    width: 100%;
+  
+    font-size: 12px;
+  
+    border: 1px solid $border-input-fields;
+    border-radius: 4px;
+  
+    transition: border 250ms $timing-function;
+
+    &:focus {
+        border: 1px solid $accent-colour;
+        outline: none;
+    }
+}
+
+.form__icon {
+    transition: fill 250ms $timing-function;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+  
+    transform: translateY(-50%);
+
+    .form__input:focus ~ & {
+        fill: $accent-colour;
+    }
+}
+
+.form__textarea {
+    display: block;
+
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+  
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.172;
+  
+    resize: none;
+    background-color: $bgc-primary;
+    border: 1px solid $border-input-fields;
+    border-radius: 4px;
+  
+    transition: border 250ms $timing-function;
+
+    &:focus {
+        border: 1px solid $accent-colour;
+        outline: none;
+    }
+}
+
+.form__input::placeholder, .form__textarea::placeholder {
+    margin: 0;
+    padding: 0;
+  
+    font-size: 12px;
+    line-height: 1.172;
+    letter-spacing: 0.01em;
+  
+    color: $input-placeholder-colour;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 200px;
+    height: 50px;
+  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+  
+    color: $text-colour-tertiary;
+  
+    background: $accent-colour;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+  
+    transition: background-color 250ms $timing-function;
+
+    &:hover, &:focus {
+        background-color: $accent-button-hover-colour;
+    }
+}

@@ -1,0 +1,24 @@
+.logo {
+    @extend %link;
+    font: {
+      family: 'Raleway', sans-serif;
+      size: 26px;
+      weight: 700;
+    }
+  line-height: 1.19;
+
+  color: $accent-colour;
+
+  &--black-piece {
+    color: $text-logo-colour;
+  }
+
+  &--white-piece {
+    color: $text-colour-tertiary;
+  }
+}
+
+.logo__footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,35 @@
+
+.address {
+    font-style: normal; 
+}
+
+.address__list {
+    @extend %list;
+}
+.address__item {
+    width: 231px;
+}
+.address__link {
+    @extend %link;
+    display: inline-block;
+  
+    font-size: 14px;
+    line-height: 1.714;
+  
+    color: $text-contacts-footer-colour;
+  
+    transition: color 250ms $timing-function;
+
+    &:hover, &:focus {
+        color: $accent-colour;
+    }
+
+    &--map {
+        margin-bottom: 9px;
+        color: $text-colour-tertiary;
+    }
+
+    &--mail {
+        margin-bottom: 9px;
+    }
+}

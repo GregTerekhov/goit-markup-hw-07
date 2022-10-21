@@ -1,0 +1,46 @@
+$accent-colour: #2196f3;
+$accent-button-hover-colour: #188ce8;
+$accent-projects-overlay-colour: rgba(33, 150, 243, 0.9);
+$bgc-primary: #ffffff;
+$bgc-secondary: #2f303a;
+$bgc-tertiary: #f5f4fa;
+$bgc-footer-network: rgba(255, 255, 255, 0.1);
+$bgc-overlay-modal: rgba(0, 0, 0, 0.2);
+$border-button-close-colour: rgba(0, 0, 0, 0.1);
+$border-checkbox-colour: #212121;
+$border-header-colour: #ececec;
+$border-input-fields: rgba(33, 33, 33, 0.2);
+$border-projectblock-colour: #eeeeee;
+$button-close-colour: #000000;
+$gradient-hero-colour: rgba(47, 48, 58, 0.4);
+$icons-hover-colour: #ffffff;
+$input-footer-placeholder-colour: rgba(255, 255, 255, 0.6);
+$input-placeholder-colour: rgba(117, 117, 117, 0.5);
+$link-nonactive-colour: #afb1b8;
+$text-colour-primary: #212121;
+$text-colour-secondary: #757575;
+$text-colour-tertiary: #ffffff;
+$text-contacts-footer-colour: rgba(255, 255, 255, 0.6);
+$text-logo-colour: #000000;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+.page {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.03em;
+  
+    background-color: $bgc-primary;
+    color: $text-colour-primary;
+  }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+  }
+
+  .picture {
+    @extend %picture;
+  }

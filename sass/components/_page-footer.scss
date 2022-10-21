@@ -1,0 +1,18 @@
+.page-footer {
+    background-color: $bgc-secondary;
+
+    &--padding {  
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.page-footer__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.page-footer__wrap {
+    margin-right: 70px;
+}

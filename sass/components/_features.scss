@@ -1,0 +1,46 @@
+.features {
+    @extend %section-padding;
+}
+
+.features__title {
+    @extend %visually-hidden;
+}
+
+.features__list {
+    @extend %list;
+    display: flex;
+}
+
+.features__item {
+    width: calc((100% - 90px) / 4);
+
+    & + & {
+         margin-left: 30px;
+    }
+}
+
+.features__thumb {
+    padding: 25px 100px;
+  margin-bottom: 30px;
+
+  background-color: $bgc-tertiary;
+
+  border-radius: 4px;
+}
+
+.features__subtitle {
+    @extend %title;
+    margin-bottom: 10px;
+  
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+.features__descr {
+    @extend %text;  
+    font-size: 14px;
+    line-height: 1.71;
+  
+    color: $text-colour-secondary;
+  }

@@ -1,0 +1,63 @@
+.hero {
+    text-align: center;
+}
+
+.hero__overlay {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    background-image: linear-gradient(
+        $gradient-hero-colour, 
+        $gradient-hero-colour), url('.../images/meeting-bgd.jpg');
+    background-position: center; 
+}
+
+.hero__title {
+    @extend %title;
+    width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $text-colour-tertiary;
+}
+
+.hero__button {
+    @extend %button;
+    display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 216px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: $text-colour-tertiary;
+  background-color: $accent-colour;
+
+  border-radius: 4px;
+  border: none;
+
+  transition: background-color 250ms $timing-function,
+    box-shadow 250ms $timing-function;
+
+    &:hover, &:focus {
+        background: $accent-button-hover-colour;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
