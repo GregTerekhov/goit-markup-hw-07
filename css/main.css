@@ -14,12 +14,12 @@
   width: 1200px;
 }
 
-.projects__cards-link, .socials__link, .address__link, .clients__logo, .team__link, .feedback__link, .navigation__link, .logo {
+.projects__cards-link, .socials__link, .address__link, .clients__logo, .team__link, .feedback__link, .navigation__link, .logo, .logo--footer {
   text-decoration: none;
   color: inherit;
 }
 
-.projects__filters-list, .projects__cards-list, .socials__list, .address__list, .clients__list, .team__socials-list, .team__list, .activity__list, .features__list, .form__panel-list, .feedback, .navigation__list {
+.projects__cards-list, .projects__filters-list, .socials__list, .address__list, .clients__list, .team__socials-list, .team__list, .activity__list, .features__list, .form__panel-list, .feedback, .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -320,7 +320,7 @@ summary {
   justify-content: space-between;
 }
 
-.logo {
+.logo, .logo--footer {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -330,13 +330,12 @@ summary {
 .logo--black-piece {
   color: #000000;
 }
-.logo--white-piece {
-  color: #ffffff;
-}
-
-.logo__footer {
+.logo--footer {
   display: inline-block;
   margin-bottom: 20px;
+}
+.logo--white-piece {
+  color: #ffffff;
 }
 
 .navigation {
@@ -435,7 +434,7 @@ summary {
   min-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".../images/meeting-bgd.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/meeting-bgd.jpg");
   background-position: center;
 }
 
@@ -1030,6 +1029,38 @@ summary {
   fill: currentColor;
 }
 
+.projects__filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.projects__filters-item + .projects__filters-item {
+  margin-left: 8px;
+}
+
+.projects__filters-button {
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: inherit;
+  text-align: center;
+  background-color: #f5f4fa;
+  border: none;
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects__filters-button:hover, .projects__filters-button:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.projects__filters-button--current {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
 .projects__cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -1059,7 +1090,7 @@ summary {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-link:hover .projects__overlay, .project-link:focus .projects__overlay {
+.projects__cards-link:hover .projects__overlay, .projects__cards-link:focus .projects__overlay {
   opacity: 1;
   transform: translatey(0);
 }
@@ -1091,36 +1122,4 @@ summary {
   font-size: 16px;
   line-height: 1.87;
   color: #757575;
-}
-
-.projects__filters-list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.projects__filters-item + .projects__filters-item {
-  margin-left: 8px;
-}
-
-.projects__filters-button {
-  padding: 6px 22px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: inherit;
-  text-align: center;
-  background-color: #f5f4fa;
-  border: none;
-  border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.projects__filters-button:hover, .projects__filters-button:focus {
-  color: #ffffff;
-  background-color: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.projects__filters-button--current {
-  color: #ffffff;
-  background-color: #2196f3;
 }/*# sourceMappingURL=main.css.map */

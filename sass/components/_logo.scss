@@ -13,12 +13,13 @@
     color: $text-logo-colour;
   }
 
+  &--footer {
+    @extend .logo;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
   &--white-piece {
     color: $text-colour-tertiary;
   }
-}
-
-.logo__footer {
-  display: inline-block;
-  margin-bottom: 20px;
 }
