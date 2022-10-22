@@ -18,7 +18,7 @@
     <!--Верхня лінія-->
     <header class="page-header">
       <div class="container page-header__container">
-        <nav class="navigation">
+        <nav class="navigation page-header__navigation">
           <a href="./index.html" class="logo" lang="en"
             >Web<span class="logo--black-piece">Studio</span>
           </a>
@@ -38,7 +38,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="feedback">
+        <ul class="feedback page-header__feedback">
           <li>
             <a
               class="feedback__link"
@@ -75,8 +75,8 @@
         </div>
       </section>
       <!-- Modal window -->
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal-container">
+      <div class="backdrop is-hidden page__backdrop" data-modal>
+        <div class="modal-container page__modal-container">
           <button
             data-modal-close
             class="modal-container__button"
@@ -86,7 +86,7 @@
               <use href="./images/icons.svg#icon-close-button"></use>
             </svg>
           </button>
-          <form class="form" action="#">
+          <form class="form modal-container__form" action="#">
             <b class="form__call"> Залиште свої дані, ми вам передзвонимо </b>
             <ul class="form__panel-list">
               <li>

@@ -5,3 +5,13 @@
 .page-header__container {
     @include centeredFlex($justify-content: space-between);
 }
+
+.page-header__navigation {
+    @include centeredFlex();
+}
+
+.page-header__feedback {
+    @extend %list;
+    @include centeredFlex();
+    gap: 50px;
+}

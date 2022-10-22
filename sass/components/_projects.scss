@@ -114,6 +114,7 @@
     border: 1px solid getColor('border-cards');
     border-top: none;
 }
+
 .projects__name {
     @extend %title;
     margin-bottom: 4px;
@@ -124,10 +125,11 @@
     text-transform: capitalize;
 
     &--lowercase-letter {
-        @extend %lowercase-letter;
+        text-transform: lowercase;
     }
 
 }
+
 .projects__category {
     @extend %text;
 

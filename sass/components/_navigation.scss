@@ -1,7 +1,3 @@
-.navigation {
-    @include centeredFlex();
-}
-
 .navigation__list {
     @extend %list;
     @include centeredFlex();
