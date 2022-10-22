@@ -3,3 +3,10 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
+@mixin pseudo($display: block, $pos: absolute, $content: '', $width: 100%){
+    content: $content;
+    display: $display;
+    position: $pos;
+    width: $width;
+  }

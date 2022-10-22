@@ -17,9 +17,3 @@
     color: getColor('logo-footer');
   }
 }
-
-.page-footer__logo {
-  @extend .logo;
-  display: inline-block;
-  margin-bottom: 20px;
-}

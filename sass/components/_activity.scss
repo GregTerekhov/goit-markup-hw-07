@@ -28,11 +28,9 @@
     z-index: -1;
 
     &::before {
-        content: "";
-        position: absolute;
+        @include pseudo();
         bottom: 0;
       
-        width: 100%;
         height: 70px;
       
         background-color: getColor('background-activity-label');

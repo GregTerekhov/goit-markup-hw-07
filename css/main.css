@@ -364,11 +364,6 @@ summary {
   color: #ffffff;
 }
 
-.page-footer__logo {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
 .navigation__list {
   display: flex;
   justify-content: center;
@@ -402,9 +397,10 @@ summary {
 }
 .navigation__link--current::after {
   content: "";
+  display: block;
   position: absolute;
-  bottom: -1px;
   width: 100%;
+  bottom: -1px;
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
@@ -427,10 +423,10 @@ summary {
 }
 .feedback__link::after {
   content: "";
-  position: absolute;
-  bottom: -1px;
   display: block;
+  position: absolute;
   width: 100%;
+  bottom: -1px;
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
@@ -548,13 +544,6 @@ summary {
 
 .modal-container__icon {
   fill: currentColor;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .form__call {
@@ -783,9 +772,10 @@ summary {
 }
 .activity__thumb::before {
   content: "";
+  display: block;
   position: absolute;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -927,6 +917,11 @@ summary {
 
 .page-footer__wrap {
   margin-right: 70px;
+}
+
+.page-footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .page-footer__socials {

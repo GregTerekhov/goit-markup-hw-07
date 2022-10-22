@@ -18,39 +18,39 @@
 .hero__title {
     @extend %title;
     width: 696px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 
-  color: getColor('text-tertiary');
+    color: getColor('text-tertiary');
 }
 
 .hero__button {
     @extend %button;
     @include centeredFlex($type: inline-flex);
 
-  width: 216px;
-  height: 50px;
+    width: 216px;
+    height: 50px;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    text-align: center;
 
-  color: getColor('text-tertiary');
-  background-color: getColor('accent');
+    color: getColor('text-tertiary');
+    background-color: getColor('accent');
 
-  border-radius: 4px;
-  border: none;
+    border-radius: 4px;
+    border: none;
 
-  transition: background-color 250ms $timing-function,
+    transition: background-color 250ms $timing-function,
     box-shadow 250ms $timing-function;
 
     &:hover, &:focus {
