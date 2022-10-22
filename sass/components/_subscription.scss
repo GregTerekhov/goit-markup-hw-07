@@ -1,18 +1,14 @@
 .subscription__call {
+    @extend %font-subtitle;
+
     display: block;
     margin-bottom: 20px;
   
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.143;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  
-    color: $text-colour-tertiary;
+    color: getColor('text-tertiary');
 }
 
 .subscription__form {
-    display: flex;
+    @include centeredFlex();
 }
 
 .subscription__input {
@@ -20,8 +16,8 @@
 
     width: 358px;
   
-    color: $text-colour-tertiary;
-    background-color: $bgc-secondary;
+    color: getColor('text-tertiary');
+    background-color: getColor('background-secondary');
   
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -31,15 +27,13 @@
         font-size: 16px;
         line-height: 1.25;
       
-        color: $input-footer-placeholder-colour;      
+        color: getColor('placeholder-footer');      
     }
 }
 
 .subscription__button {
     @extend %button;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex($type: inline-flex);
     margin-left: 12px;
   
     width: 200px;
@@ -50,8 +44,8 @@
     line-height: 1.88;
     letter-spacing: 0.06em;
   
-    color: $text-colour-tertiary;
-    background-color: $accent-colour;
+    color: getColor('text-tertiary');
+    background-color: getColor('accent');
   
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
@@ -60,7 +54,7 @@
     transition: background-color 250ms $timing-function;
 
     &:hover, &:focus {
-        background: $accent-button-hover-colour;
+        background: getColor('primary-button-hover');
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 }

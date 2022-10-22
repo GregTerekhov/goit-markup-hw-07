@@ -1,8 +1,6 @@
 .form {
-    display: flex;
+    @include centeredFlex();
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .form__call {
@@ -31,7 +29,7 @@
     line-height: 1.172;
     letter-spacing: 0.01em;
   
-    color: $text-colour-secondary;
+    color: getColor('text-secondary');
 }
 
 .form__field {
@@ -46,13 +44,13 @@
   
     font-size: 12px;
   
-    border: 1px solid $border-input-fields;
+    border: 1px solid getColor('border-modal-input');
     border-radius: 4px;
   
     transition: border 250ms $timing-function;
 
     &:focus {
-        border: 1px solid $accent-colour;
+        border: 1px solid getColor('accent');
         outline: none;
     }
 }
@@ -66,7 +64,7 @@
     transform: translateY(-50%);
 
     .form__input:focus ~ & {
-        fill: $accent-colour;
+        fill: getColor('accent');
     }
 }
 
@@ -82,19 +80,20 @@
     line-height: 1.172;
   
     resize: none;
-    background-color: $bgc-primary;
-    border: 1px solid $border-input-fields;
+    background-color: getColor('background-primary');
+    border: 1px solid getColor('border-modal-input');
     border-radius: 4px;
   
     transition: border 250ms $timing-function;
 
     &:focus {
-        border: 1px solid $accent-colour;
+        border: 1px solid getColor('accent');
         outline: none;
     }
 }
 
-.form__input::placeholder, .form__textarea::placeholder {
+.form__input::placeholder, 
+.form__textarea::placeholder {
     margin: 0;
     padding: 0;
   
@@ -102,13 +101,16 @@
     line-height: 1.172;
     letter-spacing: 0.01em;
   
-    color: $input-placeholder-colour;
+    color: getColor('placeholder-modal');
+}
+
+.form__checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .form__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
   
     width: 200px;
     height: 50px;
@@ -119,9 +121,9 @@
     text-align: center;
     letter-spacing: 0.06em;
   
-    color: $text-colour-tertiary;
+    color: getColor('text-tertiary');
   
-    background: $accent-colour;
+    background: getColor('accent');
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
@@ -129,6 +131,6 @@
     transition: background-color 250ms $timing-function;
 
     &:hover, &:focus {
-        background-color: $accent-button-hover-colour;
+        background-color: getColor('primary-button-hover');
     }
 }

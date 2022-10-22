@@ -7,19 +7,19 @@
     }
   line-height: 1.19;
 
-  color: $accent-colour;
+  color: getColor('accent');
 
   &--black-piece {
-    color: $text-logo-colour;
-  }
-
-  &--footer {
-    @extend .logo;
-    display: inline-block;
-    margin-bottom: 20px;
+    color: getColor('logo-header');
   }
 
   &--white-piece {
-    color: $text-colour-tertiary;
+    color: getColor('logo-footer');
   }
+}
+
+.page-footer__logo {
+  @extend .logo;
+  display: inline-block;
+  margin-bottom: 20px;
 }

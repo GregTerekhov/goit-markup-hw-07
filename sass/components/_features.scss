@@ -1,5 +1,5 @@
 .features {
-    @extend %section-padding;
+    padding: 94px 0;
 }
 
 .features__title {
@@ -8,7 +8,7 @@
 
 .features__list {
     @extend %list;
-    display: flex;
+    @include centeredFlex($align-items: flex-start);
 }
 
 .features__item {
@@ -23,24 +23,21 @@
     padding: 25px 100px;
   margin-bottom: 30px;
 
-  background-color: $bgc-tertiary;
+  background-color: getColor('background-tertiary');
 
   border-radius: 4px;
 }
 
 .features__subtitle {
     @extend %title;
+    @extend %font-subtitle;
     margin-bottom: 10px;
-  
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-  }
+}
 
 .features__descr {
     @extend %text;  
     font-size: 14px;
     line-height: 1.71;
   
-    color: $text-colour-secondary;
+    color: getColor('text-secondary');
   }

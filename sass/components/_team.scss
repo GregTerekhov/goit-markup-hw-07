@@ -1,6 +1,6 @@
 .team {
-    @extend %section-padding;
-    background-color: $bgc-tertiary;
+    padding: 94px 0;
+    background-color: getColor('background-tertiary');
 }
 
 .team__title {
@@ -14,7 +14,7 @@
 
 .team__list {
     @extend %list;
-    display: flex;
+    @include centeredFlex();
     gap: 30px;
 }
 
@@ -28,7 +28,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
   
-    background-color: $bgc-primary;
+    background-color: getColor('background-primary');
   
     border-radius: 0px 0px 4px 4px;
 }
@@ -52,27 +52,24 @@
     text-transform: capitalize;
     text-align: center;
   
-    color: $text-colour-secondary;
+    color: getColor('text-secondary');
 }
 
 .team__socials-list {
     @extend %list;
-    display: flex;
-    justify-content: center;
+    @include centeredFlex();
     gap: 10px;
 }
 
 .team__link {
     @extend %link;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
   
     width: 44px;
     height: 44px;
   
-    background-color: $bgc-primary;
-    color: $link-nonactive-colour;
+    background-color: getColor('background-primary');
+    color: getColor('link-nonactive');
   
     border-radius: 50%;
   
@@ -80,8 +77,8 @@
     background-color 250ms $timing-function;
 
     &:hover, &:focus {
-        background-color: $accent-colour;
-        color: $icons-hover-colour;
+        background-color: getColor('accent');
+        color: getColor('social-icons-hover');
     }
 }
 

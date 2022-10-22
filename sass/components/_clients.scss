@@ -1,5 +1,5 @@
 .clients {
-    @extend %section-padding;
+  padding: 94px 0;
 }
 
 .clients__title {
@@ -14,29 +14,26 @@
 
   .clients__list {
     @extend %list;
-    display: flex;
-    justify-content: center;
+    @include centeredFlex();
     gap: 30px;
   }
 
 .clients__logo {
     @extend %link;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
     width: 170px;
     height: 92px;
   
-    border: 1px solid $link-nonactive-colour;
+    border: 1px solid getColor('link-nonactive');
     border-radius: 4px;
-    color: $link-nonactive-colour;
+    color: getColor('link-nonactive');
   
     transition: border 250ms $timing-function,
       color 250ms $timing-function;
 
       &:hover, &:focus {
-        border-color: $accent-colour;
-        color: $accent-colour;
+        border-color: getColor('accent');
+        color: getColor('accent');
       }
 }
 

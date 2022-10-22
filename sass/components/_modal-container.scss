@@ -6,7 +6,7 @@
     width: 528px;
     padding: 40px;
   
-    background-color: $bgc-primary;
+    background-color: getColor('background-primary');
   
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -25,22 +25,20 @@
     top: 8px;
     right: 8px;
   
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
   
     padding: 6px;
   
-    fill: $button-close-colour;
-    background-color: $bgc-primary;
+    fill: getColor('button-modal-close');
+    background-color: getColor('background-primary');
   
-    border: 1px solid $border-button-close-colour;
+    border: 1px solid getColor('border-button-close');
     border-radius: 50%;
   
     transition: color 250ms $timing-function;
 
     &:hover, &:focus {
-        color: $accent-colour;
+        color: getColor('accent');
     }
 }
 

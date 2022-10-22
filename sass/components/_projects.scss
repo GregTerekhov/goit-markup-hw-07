@@ -1,5 +1,5 @@
 .projects {
-    @extend %section-padding;
+    padding: 94px 0;
 }
 
 .projects__title {
@@ -8,8 +8,7 @@
 
 .projects__filters-list {
     @extend %list;
-    display: flex;
-    justify-content: center;
+    @include centeredFlex();
     margin-bottom: 50px;
 }
 
@@ -30,7 +29,7 @@
     letter-spacing: inherit;
     text-align: center;
   
-    background-color: $bgc-tertiary;
+    background-color: getColor('background-tertiary');
   
     border: none;
     border-radius: 4px;
@@ -40,21 +39,21 @@
       box-shadow 250ms $timing-function;
 
       &:hover, &:focus {
-        color: $text-colour-tertiary;
-        background-color: $accent-colour;
+        color: getColor('text-tertiary');
+        background-color: getColor('accent');
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
           0px 2px 2px rgba(0, 0, 0, 0.12);
       }
 
       &--current {
-        color: $text-colour-tertiary;
-        background-color: $accent-colour;
+        color: getColor('text-tertiary');
+        background-color: getColor('accent');
       }
 }
 
 .projects__cards-list {
     @extend %list;
-    display: flex;
+    @include centeredFlex();
     flex-wrap: wrap;
     gap: 30px;
 }
@@ -75,14 +74,13 @@
     position: relative;
     overflow: hidden;
   
-    display: flex;
-    justify-content: center;
+    @include centeredFlex();
 }
 
 .projects__overlay {
     position: absolute;
 
-    background-color: $accent-projects-overlay-colour;
+    background-color: getColor('overlay-cards');
   
     opacity: 0;
     pointer-events: none;
@@ -107,18 +105,18 @@
     line-height: 1.56;
     letter-spacing: inherit;
   
-    color: $text-colour-tertiary;
+    color: getColor('text-tertiary');
 }
 
 .projects__meta {
     padding: 20px 24px;
 
-    border: 1px solid $border-projectblock-colour;
+    border: 1px solid getColor('border-cards');
     border-top: none;
 }
 .projects__name {
     @extend %title;
-    margin: 0 auto 4px;
+    margin-bottom: 4px;
 
     font-size: 18px;
     line-height: 2;
@@ -132,10 +130,9 @@
 }
 .projects__category {
     @extend %text;
-    margin: 0 auto;
 
     font-size: 16px;
     line-height: 1.87;
   
-    color: $text-colour-secondary;
+    color: getColor('text-secondary');
 }

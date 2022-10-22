@@ -14,7 +14,11 @@
   width: 1200px;
 }
 
-.projects__cards-link, .socials__link, .address__link, .clients__logo, .team__link, .feedback__link, .navigation__link, .logo, .logo--footer {
+.modal-open {
+  overflow: hidden;
+}
+
+.projects__cards-link, .socials__link, .address__link, .clients__logo, .team__link, .checkbox__contract-terms, .feedback__link, .navigation__link, .logo, .page-footer__logo {
   text-decoration: none;
   color: inherit;
 }
@@ -46,10 +50,6 @@
   cursor: pointer;
 }
 
-.projects, .clients, .team, .features {
-  padding: 94px 0;
-}
-
 .projects__title, .features__title {
   position: absolute;
   white-space: nowrap;
@@ -66,6 +66,13 @@
 
 .projects__name--lowercase-letter {
   text-transform: lowercase;
+}
+
+.subscription__call, .socials__call, .activity__label, .features__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
 }
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -316,11 +323,11 @@ summary {
 
 .page-header__container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.logo, .logo--footer {
+.logo, .page-footer__logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -330,22 +337,25 @@ summary {
 .logo--black-piece {
   color: #000000;
 }
-.logo--footer {
-  display: inline-block;
-  margin-bottom: 20px;
-}
 .logo--white-piece {
   color: #ffffff;
 }
 
+.page-footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .navigation {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
 .navigation__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 93px;
 }
 
@@ -369,6 +379,8 @@ summary {
 .navigation__link--current {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   color: #2196f3;
 }
 .navigation__link--current::after {
@@ -429,6 +441,7 @@ summary {
 
 .hero__overlay {
   display: flex;
+  justify-content: center;
   align-items: center;
   max-width: 1600px;
   min-height: 600px;
@@ -529,9 +542,9 @@ summary {
 
 .form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .form__call {
@@ -625,13 +638,19 @@ summary {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form__input::placeholder, .form__textarea::placeholder {
+.form__input::placeholder,
+.form__textarea::placeholder {
   margin: 0;
   padding: 0;
   font-size: 12px;
   line-height: 1.172;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.form__checkbox {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .form__button {
@@ -656,13 +675,9 @@ summary {
   background-color: #188ce8;
 }
 
-.checkbox--margin {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
 .checkbox__label {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 14px;
   line-height: 1.71;
@@ -696,8 +711,14 @@ summary {
   color: #2196f3;
 }
 
+.features {
+  padding: 94px 0;
+}
+
 .features__list {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .features__item {
@@ -716,9 +737,6 @@ summary {
 
 .features__subtitle {
   margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .features__descr {
@@ -727,7 +745,7 @@ summary {
   color: #757575;
 }
 
-.activity--padding {
+.activity {
   padding-bottom: 94px;
 }
 
@@ -741,6 +759,7 @@ summary {
 .activity__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -765,14 +784,11 @@ summary {
   position: absolute;
   bottom: 0;
   padding: 27px 0;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  text-transform: uppercase;
   color: #ffffff;
 }
 
 .team {
+  padding: 94px 0;
   background-color: #f5f4fa;
 }
 
@@ -785,6 +801,8 @@ summary {
 
 .team__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
@@ -820,6 +838,7 @@ summary {
 .team__socials-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -844,6 +863,10 @@ summary {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.clients {
+  padding: 94px 0;
+}
+
 .clients__title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -855,6 +878,7 @@ summary {
 .clients__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
@@ -880,20 +904,23 @@ summary {
 
 .page-footer {
   background-color: #2f303a;
-}
-.page-footer--padding {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .page-footer__box {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .page-footer__wrap {
   margin-right: 70px;
+}
+
+.page-footer__socials {
+  margin-right: 93px;
 }
 
 .address {
@@ -922,23 +949,16 @@ summary {
   margin-bottom: 9px;
 }
 
-.socials--margin {
-  margin-right: 93px;
-}
-
 .socials__call {
   display: block;
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #ffffff;
 }
 
 .socials__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -964,16 +984,13 @@ summary {
 .subscription__call {
   display: block;
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #ffffff;
 }
 
 .subscription__form {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subscription__input {
@@ -1029,9 +1046,14 @@ summary {
   fill: currentColor;
 }
 
+.projects {
+  padding: 94px 0;
+}
+
 .projects__filters-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
 }
 
@@ -1063,6 +1085,8 @@ summary {
 
 .projects__cards-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -1080,6 +1104,7 @@ summary {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .projects__overlay {
@@ -1111,14 +1136,13 @@ summary {
 }
 
 .projects__name {
-  margin: 0 auto 4px;
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   text-transform: capitalize;
 }
 .projects__category {
-  margin: 0 auto;
   font-size: 16px;
   line-height: 1.87;
   color: #757575;

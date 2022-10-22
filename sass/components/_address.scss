@@ -1,4 +1,3 @@
-
 .address {
     font-style: normal; 
 }
@@ -16,17 +15,17 @@
     font-size: 14px;
     line-height: 1.714;
   
-    color: $text-contacts-footer-colour;
+    color: getColor('text-footer-contacts');
   
     transition: color 250ms $timing-function;
 
     &:hover, &:focus {
-        color: $accent-colour;
+        color: getColor('accent');
     }
 
     &--map {
         margin-bottom: 9px;
-        color: $text-colour-tertiary;
+        color: getColor('text-tertiary');
     }
 
     &--mail {

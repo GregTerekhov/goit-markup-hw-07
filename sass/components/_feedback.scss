@@ -20,10 +20,10 @@
   line-height: 1.143;
   letter-spacing: 0.02em;
 
-  color: $text-colour-secondary;
+  color: getColor('text-secondary');
 
   &:hover, &:focus {
-    color: $accent-colour;
+    color: getColor('accent');
   }
 
   &::after {
@@ -35,7 +35,7 @@
   width: 100%;
   height: 4px;
 
-  background-color: $accent-colour;
+  background-color: getColor('accent');
 
   border-radius: 2px;
 

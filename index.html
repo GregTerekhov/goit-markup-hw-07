@@ -152,7 +152,7 @@
                 ></textarea>
               </li>
             </ul>
-            <div class="checkbox checkbox--margin">
+            <div class="checkbox form__checkbox">
               <label for="admission" class="checkbox__label">
                 <input
                   class="checkbox__input"
@@ -229,7 +229,7 @@
         </div>
       </section>
       <!--Чим ми займаємося-->
-      <section class="activity activity--padding">
+      <section class="activity">
         <div class="container">
           <h2 class="activity__title">Чим ми займаємося</h2>
           <ul class="activity__list">
@@ -512,11 +512,11 @@
       </section>
     </main>
     <!--Підвал-->
-    <footer class="page-footer page-footer--padding">
+    <footer class="page-footer">
       <div class="container page-footer__box">
         <!-- Адреса та контактна інформація -->
         <div class="page-footer__wrap">
-          <a href="./index.html" class="logo--footer"
+          <a href="./index.html" class="logo page-footer__logo"
             >Web<span class="logo--white-piece">Studio</span>
           </a>
           <address class="address">
@@ -546,7 +546,7 @@
           </address>
         </div>
         <!-- Соцмережі -->
-        <div class="socials socials--margin">
+        <div class="socials page-footer__socials">
           <b class="socials__call">Приєднуйтесь</b>
           <ul class="socials__list">
             <li>
@@ -612,7 +612,7 @@
     <script>
       (() => {
         document
-          .querySelector(".subscription-form")
+          .querySelector(".subscription__form")
           .addEventListener("submit", (e) => {
             e.preventDefault();
 
