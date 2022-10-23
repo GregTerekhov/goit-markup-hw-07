@@ -1,48 +1,49 @@
-  %link {
-    text-decoration: none;
-    color: inherit;
-  }
+%link {
+  text-decoration: none;
+  color: inherit;
+}
 
-  %list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+%list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
- %picture {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  } 
+%picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} 
 
-  %title {
-    margin: 0;
-    padding: 0;
-  }
+%title {
+  margin: 0;
+  padding: 0;
+}
 
-  %text {
-    margin: 0;
-    padding: 0;
-  }
+%text {
+  margin: 0;
+  padding: 0;
+}
 
-  %button {
-    font-family: inherit;
-    cursor: pointer;
-  }
+%button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
 
-  %visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
   
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-    margin: -1px;
-  }
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
 %font-subtitle {
   font-weight: 700;
