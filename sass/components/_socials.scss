@@ -14,23 +14,14 @@
 }
 
 .socials__link {
-    @extend %link;
     @include centeredFlex();
-  
-    width: 44px;
-    height: 44px;
-  
-    background-color: getColor('background-footer-network');
-    color: getColor('social-icons-hover');
-  
-    border-radius: 50%;
-  
-    transition: background-color 250ms $timing-function;
+    @include socialLinks($color: getColor('social-icons-hover'), $background: getColor('background-footer-network'));
 
     &:hover, &:focus {
         background-color: getColor('accent');
     }
 }
+
 .socials__icon {
-    fill: currentColor;
+    @extend %icon;
 }

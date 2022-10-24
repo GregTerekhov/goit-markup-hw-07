@@ -9,14 +9,11 @@
     width: 231px;
 }
 .address__link {
-    @extend %link;
-    display: inline-block;
+    @include link($display: inline-block, $color: getColor('text-footer-contacts'));
   
     font-size: 14px;
     line-height: 1.714;
-  
-    color: getColor('text-footer-contacts');
-  
+    
     transition: color 250ms $timing-function;
 
     &:hover, &:focus {

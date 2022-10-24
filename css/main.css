@@ -32,59 +32,6 @@
   overflow: hidden;
 }
 
-.projects__cards-link, .socials__link, .address__link, .clients__logo, .team__link, .checkbox__contract-terms, .feedback__link, .navigation__link, .logo, .page-footer__logo {
-  text-decoration: none;
-  color: inherit;
-}
-
-.projects__cards-list, .projects__filters-list, .socials__list, .address__list, .clients__list, .team__socials-list, .team__list, .activity__list, .features__list, .form__panel-list, .navigation__list, .page-header__feedback {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.picture {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.projects__name, .clients__title, .team__name, .team__title, .activity__title, .features__subtitle, .hero__title {
-  margin: 0;
-  padding: 0;
-}
-
-.projects__category, .projects__label, .team__descr, .activity__label, .features__descr {
-  margin: 0;
-  padding: 0;
-}
-
-.projects__filters-button, .subscription__button, .modal-container__button, .hero__button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-.projects__title, .features__title {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
-}
-
-.subscription__call, .socials__call, .activity__label, .features__subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  text-transform: uppercase;
-}
-
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -327,6 +274,59 @@ summary {
   display: list-item;
 }
 
+.projects__cards-list, .projects__filters-list, .socials__list, .address__list, .clients__list, .team__socials-list, .team__list, .activity__list, .features__list, .form__panel-list, .navigation__list, .page-header__feedback {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.projects__name, .clients__title, .team__name, .team__title, .activity__title, .features__subtitle, .hero__title {
+  margin: 0;
+  padding: 0;
+}
+
+.projects__category, .projects__label, .team__descr, .activity__label, .features__descr {
+  margin: 0;
+  padding: 0;
+}
+
+.projects__filters-button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.subscription__icon, .socials__icon, .team__icon, .modal-container__icon, .feedback__icon {
+  fill: currentColor;
+}
+
+.projects__title, .features__title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+.subscription__call, .socials__call, .activity__label, .features__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+}
+
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -351,6 +351,9 @@ summary {
 }
 
 .logo, .page-footer__logo {
+  text-decoration: none;
+  color: inherit;
+  display: block;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -376,6 +379,8 @@ summary {
 }
 
 .navigation__link {
+  text-decoration: none;
+  color: inherit;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -407,10 +412,13 @@ summary {
 }
 
 .feedback__link {
-  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
@@ -439,7 +447,6 @@ summary {
 
 .feedback__icon {
   margin-right: 10px;
-  fill: currentColor;
 }
 
 .hero {
@@ -472,25 +479,28 @@ summary {
 }
 
 .hero__button {
+  padding: 0;
+  width: 216px;
+  height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  background-color: #2196f3;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 216px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: #ffffff;
-  background-color: #2196f3;
-  border-radius: 4px;
-  border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__button:hover, .hero__button:focus {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #188ce8;
 }
 
 .backdrop {
@@ -536,14 +546,11 @@ summary {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-container__button:hover, .modal-container__button:focus {
   color: #2196f3;
-}
-
-.modal-container__icon {
-  fill: currentColor;
 }
 
 .form__call {
@@ -590,11 +597,11 @@ summary {
 }
 
 .form__icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input:focus ~ .form__icon {
   fill: #2196f3;
@@ -653,22 +660,25 @@ summary {
 }
 
 .form__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
   width: 200px;
   height: 50px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  background-color: #2196f3;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .form__button:hover, .form__button:focus {
   background-color: #188ce8;
@@ -685,15 +695,13 @@ summary {
 
 .checkbox__input {
   position: absolute;
-  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
 }
 
 .checkbox__icon {
   display: inline-block;
-  width: 16px;
-  height: 15px;
   margin-right: 7px;
   border: 2px solid #212121;
   border-radius: 3px;
@@ -704,10 +712,10 @@ summary {
 }
 
 .checkbox__contract-terms {
-  display: inline-block;
-  margin-left: 2px;
   text-decoration: underline;
   color: #2196f3;
+  display: inline-block;
+  margin-left: 2px;
 }
 
 .features {
@@ -768,6 +776,7 @@ summary {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: -1;
 }
 .activity__thumb::before {
@@ -848,8 +857,8 @@ summary {
   align-items: center;
   width: 44px;
   height: 44px;
-  background-color: #ffffff;
   color: #afb1b8;
+  background-color: #ffffff;
   border-radius: 50%;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -859,7 +868,6 @@ summary {
 }
 
 .team__icon {
-  fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -937,10 +945,11 @@ summary {
 }
 
 .address__link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
   display: inline-block;
   font-size: 14px;
   line-height: 1.714;
-  color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__link:hover, .address__link:focus {
@@ -973,17 +982,13 @@ summary {
   align-items: center;
   width: 44px;
   height: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials__link:hover, .socials__link:focus {
   background-color: #2196f3;
-}
-
-.socials__icon {
-  fill: currentColor;
 }
 
 .subscription__call {
@@ -1024,31 +1029,33 @@ summary {
 }
 
 .subscription__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 12px;
+  padding: 0;
   width: 200px;
   height: 50px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  background-color: #2196f3;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
 }
 .subscription__button:hover, .subscription__button:focus {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #188ce8;
 }
 
 .subscription__icon {
   margin-left: 10px;
-  fill: currentColor;
 }
 
 .projects {
@@ -1074,8 +1081,8 @@ summary {
   letter-spacing: inherit;
   text-align: center;
   background-color: #f5f4fa;
-  border: none;
   border-radius: 4px;
+  border: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects__filters-button:hover, .projects__filters-button:focus {
@@ -1097,6 +1104,8 @@ summary {
 }
 
 .projects__cards-link {
+  text-decoration: none;
+  color: inherit;
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

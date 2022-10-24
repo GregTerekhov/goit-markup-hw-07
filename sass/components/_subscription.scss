@@ -32,34 +32,16 @@
 }
 
 .subscription__button {
-    @extend %button;
+    @include buttonPrimary();
     @include centeredFlex($type: inline-flex);
     margin-left: 12px;
-  
-    width: 200px;
-    height: 50px;
-  
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-  
-    color: getColor('text-tertiary');
-    background-color: getColor('accent');
-  
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-  
-    transition: background-color 250ms $timing-function;
 
     &:hover, &:focus {
-        background: getColor('primary-button-hover');
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        background-color: getColor('primary-button-hover');
     }
 }
 
 .subscription__icon {
+    @extend %icon;
     margin-left: 10px;
-
-    fill: currentColor;
 }

@@ -51,12 +51,12 @@
 }
 
 .form__icon {
-    transition: fill 250ms $timing-function;
     position: absolute;
     top: 50%;
     left: 12px;
   
     transform: translateY(-50%);
+    transition: fill 250ms $timing-function;
 
     .form__input:focus ~ & {
         fill: getColor('accent');
@@ -105,24 +105,8 @@
 }
 
 .form__button {
+    @include buttonPrimary();
     @include centeredFlex();
-  
-    width: 200px;
-    height: 50px;
-  
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    text-align: center;
-    letter-spacing: 0.06em;
-  
-    color: getColor('text-tertiary');
-  
-    background: getColor('accent');
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-  
-    transition: background-color 250ms $timing-function;
 
     &:hover, &:focus {
         background-color: getColor('primary-button-hover');

@@ -21,7 +21,6 @@
 }
 
 .modal-container__button {
-    @extend %button;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -35,6 +34,7 @@
   
     border: 1px solid getColor('border-button-close');
     border-radius: 50%;
+    cursor: pointer;
   
     transition: color 250ms $timing-function;
 
@@ -44,5 +44,5 @@
 }
 
 .modal-container__icon {
-    fill: currentColor;
+    @extend %icon;
 }

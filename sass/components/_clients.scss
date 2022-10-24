@@ -19,7 +19,6 @@
   }
 
 .clients__logo {
-    @extend %link;
     @include centeredFlex();
     width: 170px;
     height: 92px;

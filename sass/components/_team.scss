@@ -21,7 +21,7 @@
 .team__wrap {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team__meta {
@@ -62,19 +62,8 @@
 }
 
 .team__link {
-    @extend %link;
     @include centeredFlex();
-  
-    width: 44px;
-    height: 44px;
-  
-    background-color: getColor('background-primary');
-    color: getColor('link-nonactive');
-  
-    border-radius: 50%;
-  
-    transition: color 250ms $timing-function,
-    background-color 250ms $timing-function;
+    @include socialLinks($color: getColor('link-nonactive'), $background: getColor('background-primary'));
 
     &:hover, &:focus {
         background-color: getColor('accent');
@@ -83,7 +72,7 @@
 }
 
 .team__icon {
-    fill: currentColor;
+    @extend %icon;
 
     transition: fill 250ms $timing-function;
 }
