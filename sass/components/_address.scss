@@ -10,9 +10,7 @@
 }
 .address__link {
     @include link($display: inline-block, $color: getColor('text-footer-contacts'));
-  
-    font-size: 14px;
-    line-height: 1.714;
+    @include fontType($weight: 400, $size: 14px, $lh: 1.714);
     
     transition: color 250ms $timing-function;
 

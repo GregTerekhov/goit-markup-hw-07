@@ -29,15 +29,14 @@
 }
 
 .features__subtitle {
-    @extend %title;
-    @extend %font-subtitle;
+    @extend %margine-padding-reset;
+    @include fontType($size: 14px, $transform: uppercase);
     margin-bottom: 10px;
 }
 
 .features__descr {
-    @extend %text;  
-    font-size: 14px;
-    line-height: 1.71;
+    @extend %margine-padding-reset;  
+    @include fontType($weight: 400, $size: 14px, $lh: 1.714);
   
     color: getColor('text-secondary');
   }

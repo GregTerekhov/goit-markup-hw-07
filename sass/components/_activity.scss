@@ -3,12 +3,9 @@
 }
 
 .activity__title {
-    @extend %title;
-    margin-bottom: 50px;
-  
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
+    @extend %margine-padding-reset;
+    @include fontType($size: 36px, $align: center);
+    @extend %sec-title-margin
 }
 
 .activity__list {
@@ -37,8 +34,8 @@
 }
 
 .activity__label {
-    @extend %text;
-    @extend %font-subtitle;
+    @extend %margine-padding-reset;
+    @include fontType($size: 14px, $transform: uppercase);
     position: absolute;
     bottom: 0;
 

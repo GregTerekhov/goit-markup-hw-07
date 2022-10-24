@@ -275,8 +275,6 @@ summary {
 }
 
 .projects__cards-list, .projects__filters-list, .socials__list, .address__list, .clients__list, .team__socials-list, .team__list, .activity__list, .features__list, .form__panel-list, .navigation__list, .page-header__feedback {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -286,12 +284,18 @@ summary {
   height: auto;
 }
 
-.projects__name, .clients__title, .team__name, .team__title, .activity__title, .features__subtitle, .hero__title {
+.form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
   margin: 0;
   padding: 0;
 }
 
-.projects__category, .projects__label, .team__descr, .activity__label, .features__descr {
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+  margin: 0;
+  padding: 0;
+}
+
+.projects__category, .projects__name, .projects__label, .clients__title, .team__descr, .team__name, .team__title, .activity__label, .activity__title, .features__descr, .features__subtitle, .form__input::placeholder,
+.form__textarea::placeholder, .form__input, .form__label, .form__call, .hero__title, .projects__cards-list, .projects__filters-list, .socials__list, .address__list, .clients__list, .team__socials-list, .team__list, .activity__list, .features__list, .form__panel-list, .navigation__list, .page-header__feedback {
   margin: 0;
   padding: 0;
 }
@@ -320,11 +324,8 @@ summary {
   margin: -1px;
 }
 
-.subscription__call, .socials__call, .activity__label, .features__subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  text-transform: uppercase;
+.clients__title, .team__title, .activity__title {
+  margin-bottom: 50px;
 }
 
 .page-header {
@@ -357,7 +358,7 @@ summary {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.19;
+  line-height: 1.383;
   color: #2196f3;
 }
 .logo--black-piece {
@@ -382,12 +383,14 @@ summary {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.172;
   letter-spacing: 0.02em;
+  text-align: start;
+  text-transform: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation__link:hover, .navigation__link:focus {
@@ -418,12 +421,14 @@ summary {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 1.172;
   letter-spacing: 0.02em;
+  text-align: start;
+  text-transform: none;
+  position: relative;
+  padding: 32px 0;
   color: #757575;
 }
 .feedback__link:hover, .feedback__link:focus {
@@ -472,7 +477,7 @@ summary {
   margin-right: auto;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: 1.363;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -485,7 +490,7 @@ summary {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
@@ -554,9 +559,12 @@ summary {
 }
 
 .form__call {
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.172;
-  margin-top: 0;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: none;
   margin-bottom: 12px;
 }
 
@@ -568,12 +576,14 @@ summary {
 }
 
 .form__label {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 4px;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.172;
   letter-spacing: 0.01em;
+  text-align: start;
+  text-transform: none;
+  display: block;
+  margin-bottom: 4px;
   color: #757575;
 }
 
@@ -582,11 +592,15 @@ summary {
 }
 
 .form__input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.172;
+  letter-spacing: 0.01em;
+  text-align: start;
+  text-transform: none;
   display: block;
-  margin: 0;
   padding: 12px 12px 12px 42px;
   width: 100%;
-  font-size: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -608,13 +622,17 @@ summary {
 }
 
 .form__textarea {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.172;
+  letter-spacing: 0.01em;
+  text-align: start;
+  text-transform: none;
   display: block;
   width: 100%;
   height: 120px;
   padding: 12px 16px;
   font-family: inherit;
-  font-size: 12px;
-  line-height: 1.172;
   resize: none;
   background-color: #ffffff;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -627,30 +645,33 @@ summary {
 }
 
 .form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
-  margin: 0;
-  padding: 0;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.172;
   letter-spacing: 0.01em;
+  text-align: start;
+  text-transform: none;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
-  margin: 0;
-  padding: 0;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.172;
   letter-spacing: 0.01em;
+  text-align: start;
+  text-transform: none;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form__input::placeholder,
 .form__textarea::placeholder {
-  margin: 0;
-  padding: 0;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.172;
   letter-spacing: 0.01em;
+  text-align: start;
+  text-transform: none;
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -666,7 +687,7 @@ summary {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
@@ -688,8 +709,12 @@ summary {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: none;
   color: #757575;
 }
 
@@ -743,12 +768,22 @@ summary {
 }
 
 .features__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .features__descr {
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: none;
   color: #757575;
 }
 
@@ -757,10 +792,12 @@ summary {
 }
 
 .activity__title {
-  margin-bottom: 50px;
+  font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: 1.172;
+  letter-spacing: inherit;
   text-align: center;
+  text-transform: none;
 }
 
 .activity__list {
@@ -790,6 +827,12 @@ summary {
 }
 
 .activity__label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: uppercase;
   position: absolute;
   bottom: 0;
   padding: 27px 0;
@@ -802,10 +845,12 @@ summary {
 }
 
 .team__title {
-  margin-bottom: 50px;
+  font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: 1.172;
+  letter-spacing: inherit;
   text-align: center;
+  text-transform: none;
 }
 
 .team__list {
@@ -828,19 +873,23 @@ summary {
 }
 
 .team__name {
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.172;
+  letter-spacing: inherit;
   text-align: center;
+  text-transform: none;
+  margin-bottom: 10px;
 }
 
 .team__descr {
-  margin-bottom: 16px;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 1.19;
-  text-transform: capitalize;
+  line-height: 1.172;
+  letter-spacing: inherit;
   text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 16px;
   color: #757575;
 }
 
@@ -876,11 +925,12 @@ summary {
 }
 
 .clients__title {
-  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.666;
+  line-height: 1.172;
+  letter-spacing: inherit;
   text-align: center;
+  text-transform: none;
 }
 
 .clients__list {
@@ -948,8 +998,12 @@ summary {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
   display: inline-block;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__link:hover, .address__link:focus {
@@ -964,6 +1018,12 @@ summary {
 }
 
 .socials__call {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: uppercase;
   display: block;
   margin-bottom: 20px;
   color: #ffffff;
@@ -992,6 +1052,12 @@ summary {
 }
 
 .subscription__call {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: uppercase;
   display: block;
   margin-bottom: 20px;
   color: #ffffff;
@@ -1035,7 +1101,7 @@ summary {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
@@ -1074,15 +1140,15 @@ summary {
 }
 
 .projects__filters-button {
-  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   letter-spacing: inherit;
   text-align: center;
+  text-transform: none;
+  padding: 6px 22px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  border: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects__filters-button:hover, .projects__filters-button:focus {
@@ -1135,11 +1201,13 @@ summary {
 }
 
 .projects__label {
-  padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.56;
+  line-height: 1.556;
   letter-spacing: inherit;
+  text-align: start;
+  text-transform: none;
+  padding: 63px 24px;
   color: #ffffff;
 }
 
@@ -1150,18 +1218,24 @@ summary {
 }
 
 .projects__name {
-  margin-bottom: 4px;
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  text-align: start;
   text-transform: capitalize;
+  margin-bottom: 4px;
 }
 .projects__name--lowercase-letter {
   text-transform: lowercase;
 }
 
 .projects__category {
+  font-weight: 400;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.875;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: none;
   color: #757575;
 }/*# sourceMappingURL=main.css.map */

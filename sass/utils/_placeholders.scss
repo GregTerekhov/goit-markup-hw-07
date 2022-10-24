@@ -1,6 +1,5 @@
 %list {
-  margin: 0;
-  padding: 0;
+  @extend %margine-padding-reset;
   list-style: none;
 }
 
@@ -10,12 +9,7 @@
   height: auto;
 } 
 
-%title {
-  margin: 0;
-  padding: 0;
-}
-
-%text {
+%margine-padding-reset {
   margin: 0;
   padding: 0;
 }
@@ -44,9 +38,6 @@
   margin: -1px;
 }
 
-%font-subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  text-transform: uppercase;
+%sec-title-margin {
+  margin-bottom: 50px;
 }

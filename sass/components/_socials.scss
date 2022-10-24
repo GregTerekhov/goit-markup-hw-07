@@ -1,5 +1,5 @@
 .socials__call {
-    @extend %font-subtitle;
+    @include fontType($size: 14px, $transform: uppercase);
 
     display: block;
     margin-bottom: 20px;  
